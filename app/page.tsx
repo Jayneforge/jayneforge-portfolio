@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 export default function Home() {
   const fadeInUp = {
     hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }
   };
 
   return (
@@ -61,7 +61,7 @@ export default function Home() {
               <motion.path 
                 initial={{ pathLength: 0 }}
                 animate={{ pathLength: 1 }}
-                transition={{ duration: 1.8, ease: "easeInOut" }}
+                transition={{ duration: 1.8 }}
                 stroke="#2B231F" 
                 strokeWidth="1.5" 
                 fill="none" 
