@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projects — jayneforge</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <div class="brand"><span class="dot">◆</span>&nbsp;jayneforge</div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="projects.html" class="active">Projects</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<header class="section" style="padding-top: 70px; padding-bottom: 10px;">
+  <div class="wrap">
+    <div class="eyebrow">Projects</div>
+    <h1 style="font-size: clamp(2rem, 4.4vw, 3rem);">Real builds, real bugs, real fixes.</h1>
+    <p style="margin-top: 16px;">Each project here was built to the same standard I'd bring to an actual client — including the parts that broke and how they got fixed.</p>
+  </div>
+</header>
+
+<hr class="divider" style="margin-top: 36px;">
+
+<section class="section">
+  <div class="wrap">
+    <div class="card">
+      <div class="section-label">Full-stack automation</div>
+      <h2 style="margin-top: 10px;">Ama Events Co.</h2>
+      <p style="margin-top: 14px;">
+        A booking site and AI-powered lead-triage automation for an event planning, decor, and rental business.
+        The business problem: inquiries scattered across WhatsApp, Instagram, Facebook comments, and a website form,
+        with one overloaded owner trying to triage all of it manually. The system reads every inbound message,
+        classifies it by urgency and category, replies appropriately on whatever channel it came in on, logs it
+        to Airtable, and alerts the owner only when something actually needs her attention.
+      </p>
+
+      <div style="margin: 20px 0;">
+        <span class="tag">n8n</span>
+        <span class="tag">AI Agents (Claude / Groq)</span>
+        <span class="tag">Airtable</span>
+        <span class="tag">Meta Graph API</span>
+        <span class="tag">Gmail</span>
+        <span class="tag">Telegram</span>
+        <span class="tag">Vercel</span>
+      </div>
+
+      <h3 style="margin-top: 26px;">What made this a real build, not a demo</h3>
+      <p style="margin-top: 10px; font-size: 0.96rem;">
+        This went through an actual audit before being called done — not a happy-path showcase. Some of what surfaced:
+      </p>
+      <ul style="margin: 16px 0 0 20px; color: var(--graphite); font-size: 0.95rem; line-height: 1.8;">
+        <li>A Form Trigger vs. Webhook mismatch that would have silently broken every site submission</li>
+        <li>A completely empty WhatsApp reply node — would have fired blank requests with zero indication anything was wrong</li>
+        <li>A placeholder-syntax mismatch that could have leaked raw text to real customers instead of a working link</li>
+        <li>A returning-customer detection bug caused by a date-only timestamp — fixed using full-precision metadata instead</li>
+        <li>A cross-provider email deliverability gap: reliable to Gmail, silently dropped by 2 of 3 Outlook test addresses — traced to sender reputation, not code</li>
+      </ul>
+
+      <div style="display:flex; gap:14px; margin-top: 28px; flex-wrap: wrap;">
+        <a class="btn btn-primary" href="https://ama-events-co-site.vercel.app" target="_blank">View live site →</a>
+        <a class="btn btn-ghost" href="https://github.com/jayneforge/ama-events-co-site" target="_blank">Read the full case study on GitHub</a>
+      </div>
+    </div>
+
+    <div style="margin-top: 48px; text-align:center; color: var(--graphite); font-family: var(--mono); font-size: 0.85rem;">
+      More projects in progress — check back soon.
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-note">jayneforge — building automation and AI systems that hold up</div>
+    <div class="footer-links">
+      <a href="mailto:thejayneforge@outlook.com">Email</a>
+      <a href="https://github.com/jayneforge" target="_blank">GitHub</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
