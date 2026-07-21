@@ -14,8 +14,18 @@ const projects = [
     caseStudyUrl: "/work/booking-engine",
     liveUrl: "https://ama-events-co-site.vercel.app",
     gitHubUrl: "https://github.com/Jayneforge/ama-events-co-site"
+  },
+  {
+    id: "02",
+    title: "Autonomous Email Triage & Subscription Intelligence Agent",
+    role: "Systems Architect & Developer",
+    category: "DISTRIBUTED AUTOMATION",
+    description: "A four-part, event-driven n8n pipeline designed to conquer unmanaged inbox chaos, secure calendar tracking independently of company reminders, and manage human-in-the-loop weekly unsubscribe prompts via Telegram.",
+    stack: ["n8n", "Groq (Qwen 3)", "Gmail", "Google Calendar", "Telegram"],
+    caseStudyUrl: "/work/email-triage-agent",
+    liveUrl: "",
+    gitHubUrl: "https://github.com/Jayneforge/email-triage-agent"
   }
-  // You can easily append future projects to this array
 ];
 
 export default function WorkDirectory() {
@@ -135,7 +145,7 @@ export default function WorkDirectory() {
                     rel="noopener noreferrer" 
                     className="text-xs font-semibold uppercase tracking-wider text-[#2B231F]/60 hover:text-[#2B231F] transition-colors"
                   >
-                    Live Preview
+                    {project.id === "02" ? "" : "Live Preview"}
                   </a>
                 </div>
               </div>
