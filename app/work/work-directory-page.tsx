@@ -25,6 +25,17 @@ const projects = [
     caseStudyUrl: "/work/email-triage-agent",
     liveUrl: "",
     gitHubUrl: "https://github.com/Jayneforge/email-triage-agent"
+  },
+  {
+    id: "03",
+    title: "NexterTV Casting Pipeline",
+    role: "Systems Architect & Developer",
+    category: "REALITY SHOW CASTING PIPELINE",
+    description: "A multi-show casting intake system that screens, scores, and ranks applicants against show-specific criteria — replacing manual triage with real eligibility gating, per-show AI scoring, and duplicate-identity detection, so a producer reviews a ranked shortlist instead of every raw submission.",
+    stack: ["n8n", "GPT-4o", "Google Sheets", "Slack", "Telegram"],
+    caseStudyUrl: "/work/nextertv-casting",
+    liveUrl: "https://nextertv-casting.vercel.app",
+    gitHubUrl: "https://github.com/Jayneforge/nextertv-casting"
   }
 ];
 
@@ -138,15 +149,19 @@ export default function WorkDirectory() {
                   >
                     Repository
                   </a>
-                  <span className="text-[#D4C5B9]/60">|</span>
-                  <a 
-                    href={project.liveUrl} 
-                    target="_blank" 
-                    rel="noopener noreferrer" 
-                    className="text-xs font-semibold uppercase tracking-wider text-[#2B231F]/60 hover:text-[#2B231F] transition-colors"
-                  >
-                    {project.id === "02" ? "" : "Live Preview"}
-                  </a>
+                  {project.liveUrl && (
+                    <>
+                      <span className="text-[#D4C5B9]/60">|</span>
+                      <a 
+                        href={project.liveUrl} 
+                        target="_blank" 
+                        rel="noopener noreferrer" 
+                        className="text-xs font-semibold uppercase tracking-wider text-[#2B231F]/60 hover:text-[#2B231F] transition-colors"
+                      >
+                        Live Preview
+                      </a>
+                    </>
+                  )}
                 </div>
               </div>
             </motion.div>
