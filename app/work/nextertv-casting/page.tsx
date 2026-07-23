@@ -93,7 +93,7 @@ export default function NexterTVCastingPipelineCaseStudy() {
             <div className="space-y-2">
               <h4 className="font-bold text-[#2B231F] text-lg">The Solution</h4>
               <p className="text-[#2B231F]/70 text-[0.95rem] font-light leading-relaxed">
-                I built an n8n pipeline that gates every applicant through real eligibility checks (age computed from date of birth, not a checkbox), screens for duplicate identities across phone and social handles, scores each applicant against a rubric built specifically for their chosen show using GPT-4o, and routes the result into a ranked, producer-ready shortlist — with instant alerts reserved only for the strongest candidates.
+                I built an n8n pipeline that gates every applicant through real eligibility checks (age computed from date of birth, not a checkbox), screens for duplicate identities across phone and social handles, scores each applicant against a rubric built specifically for their chosen show, sends a review mail automatically to eople who send a broken link of their video submission, keeps an error log of systemic failures, it also logs entries that were auto-rejected; for a human review to confirm and finally logs and routes the result into a ranked, producer-ready shortlist — with instant alerts reserved only for the strongest and edge-case candidates.
               </p>
             </div>
           </div>
@@ -168,7 +168,7 @@ export default function NexterTVCastingPipelineCaseStudy() {
                 <tr className="hover:bg-[#F9F6F0]/20">
                   <td className="p-5 font-semibold text-[#2B231F]">06 / Producer Alerting</td>
                   <td className="p-5">Slack & Telegram Alert</td>
-                  <td className="p-5">Pings instantly only for the top "Strong Shortlist" tier — everything else waits quietly in the sheet for manual review.</td>
+                  <td className="p-5">Pings instantly only for the top "Strong Shortlist" and "Edge Case" tiers — everything else waits quietly in the sheet for manual review.</td>
                 </tr>
               </tbody>
             </table>
@@ -192,9 +192,9 @@ export default function NexterTVCastingPipelineCaseStudy() {
               </p>
             </div>
             <div className="space-y-3">
-              <h3 className="font-bold text-[#2B231F] text-xl">Duplicate Detection That's Actually Checked</h3>
+              <h3 className="font-bold text-[#2B231F] text-xl">Duplicate Detection And Valid Link Check</h3>             
               <p className="text-[#2B231F]/70 font-light text-[0.95rem] leading-relaxed">
-                A fingerprint that's computed but never compared against past records isn't deduplication. Every new applicant is checked against the full history already logged.
+                Every new applicant is checked against the full history already logged, ensuring thorough deduplication. Video links are also validated before any AI scoring is done, so producers never waste time on broken submissions.
               </p>
             </div>
           </div>

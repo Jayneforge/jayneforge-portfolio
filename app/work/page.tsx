@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 const projects = [
   {
     id: "01",
-    title: "Ama Events Co.",
+    title: "Ama Events Co. — Automated Booking & Lead Intelligence Engine",
     role: "Systems Architect & PM",
     category: "PRODUCTION ENGINE",
     description: "An end-to-end automated booking architecture and intelligent lead qualification pipeline designed to turn structural chaos into hands-free business efficiency.",
